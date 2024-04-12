@@ -1,4 +1,4 @@
-{% set version = '0.6.0' %}
+{% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gpindex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gpindex/gpindex_{{ version }}.tar.gz
-  sha256: e7aa1eaa743946c461c0f41679040b94243c19bf5703d064408aa197fe4af0a0
+  sha256: befa78a4afd21dc8b46f31f799162b3a90ebad464faa52cca31c5f3c388382f6
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -37,13 +37,8 @@ test:
 about:
   home: https://marberts.github.io/gpindex/, https://github.com/marberts/gpindex
   license: MIT
-  summary: Tools to build and work with bilateral generalized-mean price indexes (and by extension
-    quantity indexes), and indexes composed of generalized-mean indexes (e.g., superlative
-    quadratic-mean indexes, GEKS). Covers the core mathematical machinery for making
-    bilateral price indexes, computing price relatives, detecting outliers, and decomposing
-    indexes, with wrapper for all common (and many uncommon) index-number formulas.
-    Implements and extends many of the methods in Balk (2008, ISBN:978-1-107-40496-0),
-    von der Lippe (2001, ISBN:3-8246-0638-0), and the CPI manual (2020, ISBN:978-1-51354-298-0).
+  summary: Tools to build and work with bilateral generalized-mean price indexes (and by extension quantity indexes), and indexes composed of generalized-mean indexes (e.g., superlative quadratic-mean indexes, GEKS). Covers the core mathematical machinery for making bilateral price indexes, computing price relatives, detecting
+    outliers, and decomposing indexes, with wrapper for all common (and many uncommon) index-number formulas. Implements and extends many of the methods in Balk (2008, ISBN:978-1-107-40496-0), von der Lippe (2001, ISBN:3-8246-0638-0), and the CPI manual (2020, ISBN:978-1-51354-298-0).
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
