@@ -1,6 +1,5 @@
 {% set version = "0.6.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-gpindex
@@ -13,8 +12,7 @@ source:
   sha256: befa78a4afd21dc8b46f31f799162b3a90ebad464faa52cca31c5f3c388382f6
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
