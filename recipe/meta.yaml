@@ -1,4 +1,4 @@
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gpindex_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gpindex/gpindex_{{ version }}.tar.gz
-  sha256: befa78a4afd21dc8b46f31f799162b3a90ebad464faa52cca31c5f3c388382f6
+  sha256: a66817bb1f1bb158d7c4fe93637787a605cc71daa8a9fa96d5db6ddd93092ec2
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
